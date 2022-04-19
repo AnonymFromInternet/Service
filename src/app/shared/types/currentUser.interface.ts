@@ -1,3 +1,4 @@
+// This data will be using in all components
 export interface CurrentUserInterface {
   id: number;
   email: string;
