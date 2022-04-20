@@ -4,9 +4,12 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { registerAction } from '../../store/actions/register.action';
-import { isSubmittingSelector } from '../../store/selectors';
-import { AuthService } from '../../services/auth.service';
+import {
+  isSubmittingSelector,
+  validationErrorsSelector,
+} from '../../store/selectors';
 import { RegisterRequestInterface } from '../../types/registerRequest.interface';
+import { BackendErrorsInterface } from '../../../shared/types/backendErrors.interface';
 
 @Component({
   selector: 'app-register',
@@ -14,11 +17,7 @@ import { RegisterRequestInterface } from '../../types/registerRequest.interface'
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  constructor(
-    private formBuilder: FormBuilder,
-    private store: Store,
-    private authService: AuthService
-  ) {}
+  constructor(private formBuilder: FormBuilder, private store: Store) {}
 
   ngOnInit(): void {
     this.initializeForm();
@@ -28,10 +27,13 @@ export class RegisterComponent implements OnInit {
   // Holds data from form element
   form: FormGroup;
 
-  // Data form selector
+  // Properties for selectors
   isSubmitting$: Observable<boolean>;
+  backendErrors$: Observable<BackendErrorsInterface | null>;
+
   initializeValues() {
     this.isSubmitting$ = this.store.pipe(select(isSubmittingSelector));
+    this.backendErrors$ = this.store.pipe(select(validationErrorsSelector));
   }
 
   initializeForm(): void {
