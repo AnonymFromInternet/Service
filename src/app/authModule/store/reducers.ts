@@ -1,5 +1,6 @@
-import { AuthStateInterface } from '../types/authState.Interface';
 import { Action, createReducer, on } from '@ngrx/store';
+
+import { AuthStateInterface } from '../types/authState.Interface';
 import {
   registerAction,
   registerFailureAction,

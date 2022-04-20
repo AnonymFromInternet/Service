@@ -1,4 +1,5 @@
 import { createAction, props } from '@ngrx/store';
+
 import { ActionTypes } from '../actionTypes';
 import { RegisterRequestInterface } from '../../types/registerRequest.interface';
 import { CurrentUserInterface } from '../../../shared/types/currentUser.interface';
