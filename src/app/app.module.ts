@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './authModule/auth.module';
 import { environment } from '../environments/environment';
+import { TopBarModule } from './shared/modules/topBar/topBar.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { environment } from '../environments/environment';
     }),
     AppRoutingModule,
     AuthModule,
+    TopBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
