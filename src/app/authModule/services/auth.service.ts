@@ -12,7 +12,7 @@ import { LoginRequestInterface } from '../types/loginRequest.interface';
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  // This function is used in post and in other methods
+  // This function is used in POST and in other methods
   getUser(response: AuthResponseInterface): CurrentUserInterface {
     return response.user;
   }
