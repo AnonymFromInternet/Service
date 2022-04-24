@@ -4,7 +4,7 @@ export interface CurrentUserInterface {
   email: string;
   createdAt: string;
   updatedAt: string;
-  userName: string;
+  username: string;
   bio: string | null;
   image: string | null;
   token: string;

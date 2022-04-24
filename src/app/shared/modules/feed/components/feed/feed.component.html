@@ -1,5 +1,5 @@
-<div *ngIf="isLoading$ | async">Loading...</div>
-<div *ngIf="error$ | async">Something went wrong...</div>
+<app-loading *ngIf="isLoading$ | async"></app-loading>
+<app-error-message *ngIf="error$ | async" style="color: red"></app-error-message>
 
 <div *ngIf="feed$ | async">
   <div class="article-preview" *ngFor="let article of (feed$ | async).articles">
@@ -23,5 +23,10 @@
       HERE IS LIST OF TAGS
     </a>
   </div>
-  PAGINATION
+  <app-pagination
+    [totalInput]="(feed$ | async).articlesCount"
+    [limitInput]="limit"
+    [urlInput]="baseUrl"
+    [currentPageInput]="currentPage"
+  ></app-pagination>
 </div>
