@@ -1,4 +1,5 @@
 import { ProfileInterface } from './profile.interface';
+import { TagType } from './tag.type';
 
 export interface ArticleInterface {
   author: ProfileInterface;
@@ -8,7 +9,7 @@ export interface ArticleInterface {
   favorited: boolean;
   favoritesCount: number;
   slug: string;
-  tagList: string[];
+  tagList: TagType[];
   title: string;
   updatedAt: string;
 }
