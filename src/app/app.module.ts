@@ -17,6 +17,7 @@ import { GlobalFeedModule } from './globalFeedModule/globalFeed.module';
 import { YourFeedModule } from './yourFeedModule/yourFeed.module';
 import { TagFeedModule } from './tagFeedModule/tagFeed.module';
 import { ArticleModule } from './articleModule/article.module';
+import { CreateArticleModule } from './createArticleModule/createArticle.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,6 +38,7 @@ import { ArticleModule } from './articleModule/article.module';
     GlobalFeedModule,
     YourFeedModule,
     TagFeedModule,
+    CreateArticleModule,
     ArticleModule,
   ],
   providers: [
