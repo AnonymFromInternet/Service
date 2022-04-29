@@ -20,5 +20,6 @@ const routes: Routes = [{ path: 'tags/:slug', component: TagFeedComponent }];
     FeedTogglerModule,
   ],
   declarations: [TagFeedComponent],
+  exports: [TagFeedComponent],
 })
 export class TagFeedModule {}

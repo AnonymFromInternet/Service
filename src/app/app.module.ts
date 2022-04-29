@@ -16,6 +16,7 @@ import { AuthInterceptor } from './shared/services/authInterceptor.service';
 import { GlobalFeedModule } from './globalFeedModule/globalFeed.module';
 import { YourFeedModule } from './yourFeedModule/yourFeed.module';
 import { TagFeedModule } from './tagFeedModule/tagFeed.module';
+import { ArticleModule } from './articleModule/article.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,6 +37,7 @@ import { TagFeedModule } from './tagFeedModule/tagFeed.module';
     GlobalFeedModule,
     YourFeedModule,
     TagFeedModule,
+    ArticleModule,
   ],
   providers: [
     PersistenceService,
