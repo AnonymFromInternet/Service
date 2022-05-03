@@ -1,1 +1,37 @@
-<h1>Article form component</h1>
+<div class="editor-page" xmlns="http://www.w3.org/1999/html">
+  <div class="container-page">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-xs-12">
+        <app-backend-error-messages
+          *ngIf="errorInput"
+          [backendErrors]="errorInput"
+        ></app-backend-error-messages>
+        <form [formGroup]="form" (ngSubmit)="articleSubmit()">
+          <fieldset>
+
+            <fieldset class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Article Title" formControlName="title">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Description" formControlName="description">
+            </fieldset>
+
+            <fieldset class="form-group">
+              <textarea class="form-control form-control-lg" rows="8" placeholder="Your Article" formControlName="body"></textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Enter tags" formControlName="taglist">
+            </fieldset>
+
+            <fieldset>
+              <button type="submit" class="btn btn-lg pull-xs-right btn-primary" [disabled]="form.invalid || isSubmittingInput">Publish Article</button>
+            </fieldset>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

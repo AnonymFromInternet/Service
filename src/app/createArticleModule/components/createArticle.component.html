@@ -1,2 +1,6 @@
-<h1>Create article component</h1>
-<app-article-form></app-article-form>
+<app-article-form
+  [initialValuesInput]="initialValues"
+  [isSubmittingInput]="isSubmitting$ | async"
+  (articleSubmitEvent)="articleSubmit($event)"
+  [errorInput]="backendErrors$ | async"
+></app-article-form>
