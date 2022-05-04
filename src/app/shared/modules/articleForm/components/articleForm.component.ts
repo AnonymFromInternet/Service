@@ -25,14 +25,14 @@ export class ArticleFormComponent implements OnInit {
   }
   initializeForm(): void {
     this.form = this.formBuilder.group({
-      title: this.initialValuesInput.title,
-      description: this.initialValuesInput.description,
-      body: this.initialValuesInput.body,
-      tagList: this.initialValuesInput.tagList.join(', '),
+      title: this.initialValuesInput.article.title,
+      description: this.initialValuesInput.article.description,
+      body: this.initialValuesInput.article.body,
+      tagList: this.initialValuesInput.article.tagList.join(', '),
     });
   }
 
   articleSubmit(): void {
-    this.articleSubmitEvent.emit(this.form.value);
+    this.articleSubmitEvent.emit({ article: this.form.value });
   }
 }

@@ -19,10 +19,12 @@ export class CreateArticleComponent implements OnInit {
   constructor(private store: Store) {}
 
   initialValues: ArticleInputInterface = {
-    title: '',
-    description: '',
-    body: '',
-    tagList: [],
+    article: {
+      title: '',
+      description: '',
+      body: '',
+      tagList: [],
+    },
   };
 
   isSubmitting$: Observable<boolean>;
