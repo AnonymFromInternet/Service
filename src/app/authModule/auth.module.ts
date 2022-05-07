@@ -15,6 +15,7 @@ import { LoginEffect } from './store/effects/login.effect';
 import { LoginComponent } from './components/login/login.component';
 import { TopBarModule } from '../shared/modules/topBar/topBar.module';
 import { GetCurrentUserEffect } from './store/effects/getCurrentUser.effect';
+import { UpdateCurrentUserEffect } from './store/effects/updateCurrentUser.effect';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
       RegisterEffect,
       LoginEffect,
       GetCurrentUserEffect,
+      UpdateCurrentUserEffect,
     ]),
     BackendErrorMessagesModule,
     TopBarModule,

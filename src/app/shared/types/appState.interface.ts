@@ -4,6 +4,7 @@ import { PopularTagsStateInterface } from '../modules/popularTags/types/popularT
 import { ArticleStateInterface } from '../../articleModule/types/articleState.interface';
 import { CreateArticleStateInterface } from '../../createArticleModule/types/createArticleState.interface';
 import { EditArticleStateInterface } from '../../editArticleModule/types/editArticleState.interface';
+import { SettingsStateInterface } from '../../settingsModule/types/settingsState.interface';
 
 // Type for whole state
 export interface AppStateInterface {
@@ -13,4 +14,5 @@ export interface AppStateInterface {
   article: ArticleStateInterface;
   createArticle: CreateArticleStateInterface;
   editArticle: EditArticleStateInterface;
+  settings: SettingsStateInterface;
 }
