@@ -14,4 +14,6 @@ export enum ActionTypes {
   UPDATE_CURRENT_USER = '[AUTH] Update current user',
   UPDATE_CURRENT_USER_SUCCESS = '[AUTH] Update current user success',
   UPDATE_CURRENT_USER_FAILURE = '[AUTH] Update current user failure',
+
+  LOGOUT = '[AUTH] Logout',
 }
