@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EffectsModule } from '@ngrx/effects';
 
 import { AddToFavoritesComponent } from './components/addToFavorites/addToFavorites.component';
+import { AddToFavoritesService } from './services/addToFavorites.service';
+import { AddToFavoritesEffect } from './store/effects/addToFavorites.effect';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, EffectsModule.forFeature([AddToFavoritesEffect])],
   exports: [AddToFavoritesComponent],
-  providers: [],
+  providers: [AddToFavoritesService],
   declarations: [AddToFavoritesComponent],
 })
 export class AddToFavoritesModule {}
